@@ -1,24 +1,30 @@
 package com.learning.marketplace.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Order {
+
     private String cvv;
     private String cardNumber;
     private String expiryDate;
     private String currency;
     private String amount;
 
+    @Id
+    private String id;
+
     public Order() {
     }
 
-    public Order(String cvv, String cardNumber, String expiryDate, String currency, String amount) {
+    public Order(String cvv, String cardNumber, String expiryDate, String currency, String amount, String id) {
         this.cvv = cvv;
         this.cardNumber = cardNumber;
         this.expiryDate = expiryDate;
         this.currency = currency;
         this.amount = amount;
+        this.id = id;
     }
 
     public String getCvv() {

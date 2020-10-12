@@ -2,8 +2,10 @@ package com.learning.marketplace.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "CUSTOMER_ORDER")
 public class Order {
 
     private String cvv;
@@ -65,5 +67,13 @@ public class Order {
 
     public void setAmount(String amount) {
         this.amount = amount;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

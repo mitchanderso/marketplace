@@ -1,5 +1,7 @@
 package com.learning.marketplace.domain;
 
+import com.learning.marketplace.model.OrderStatus;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,6 +15,7 @@ public class Order {
     private String expiryDate;
     private String currency;
     private String amount;
+    private OrderStatus orderStatus;
 
     @Id
     private String id;
@@ -27,6 +30,14 @@ public class Order {
         this.currency = currency;
         this.amount = amount;
         this.id = id;
+    }
+
+    public Order(String cvv, String cardNumber, String expiryDate, String currency, String amount) {
+        this.cvv = cvv;
+        this.cardNumber = cardNumber;
+        this.expiryDate = expiryDate;
+        this.currency = currency;
+        this.amount = amount;
     }
 
     public String getCvv() {
@@ -75,5 +86,13 @@ public class Order {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 }

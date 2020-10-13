@@ -26,7 +26,7 @@ public class OrderService {
     }
 
     BankOrderResponse getBankOrderResponse(NewOrderRequest newOrderRequest) throws RestClientException{
-        return restTemplate.postForEntity("http://localhost:8080/execufteOrder", newOrderRequest, BankOrderResponse.class).getBody();
+        return restTemplate.postForEntity("http://localhost:8080/executeOrder", newOrderRequest, BankOrderResponse.class).getBody();
     }
 
     @Transactional

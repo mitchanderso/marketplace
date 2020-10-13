@@ -1,8 +1,8 @@
-package com.learning.marketplace.services;
+package com.learning.marketplace.bank;
 
-import com.learning.marketplace.model.BankOrderResponse;
-import com.learning.marketplace.model.NewOrderRequest;
-import com.learning.marketplace.model.OrderStatus;
+import com.learning.marketplace.paymentgateway.model.BankOrderResponse;
+import com.learning.marketplace.paymentgateway.model.NewOrderRequest;
+import com.learning.marketplace.paymentgateway.model.OrderStatus;
 
 import java.util.HashSet;
 import java.util.Random;

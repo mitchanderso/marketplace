@@ -1,7 +1,7 @@
-package com.learning.marketplace.dataload;
+package com.learning.marketplace.paymentgateway.dataload;
 
-import com.learning.marketplace.domain.Order;
-import com.learning.marketplace.repository.OrderRepository;
+import com.learning.marketplace.paymentgateway.domain.Order;
+import com.learning.marketplace.paymentgateway.repository.OrderRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.learning.marketplace.model;
+package com.learning.marketplace.paymentgateway.model;
 
 public class OrderResponse {
 

@@ -1,4 +1,4 @@
-package com.learning.marketplace.utils;
+package com.learning.marketplace.paymentgateway.utils;
 
 public class OrderUtils {
     public static String obfuscateCardNumber(String cardNumber) {

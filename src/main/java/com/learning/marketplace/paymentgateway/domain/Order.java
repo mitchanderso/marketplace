@@ -1,6 +1,6 @@
-package com.learning.marketplace.domain;
+package com.learning.marketplace.paymentgateway.domain;
 
-import com.learning.marketplace.model.OrderStatus;
+import com.learning.marketplace.paymentgateway.model.OrderStatus;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

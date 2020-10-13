@@ -1,6 +1,6 @@
-package com.learning.marketplace.repository;
+package com.learning.marketplace.paymentgateway.repository;
 
-import com.learning.marketplace.domain.Order;
+import com.learning.marketplace.paymentgateway.domain.Order;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

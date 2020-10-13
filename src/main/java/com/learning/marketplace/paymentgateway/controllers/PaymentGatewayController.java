@@ -1,9 +1,9 @@
-package com.learning.marketplace.controllers;
+package com.learning.marketplace.paymentgateway.controllers;
 
-import com.learning.marketplace.domain.Order;
-import com.learning.marketplace.model.NewOrderRequest;
-import com.learning.marketplace.model.OrderResponse;
-import com.learning.marketplace.services.OrderService;
+import com.learning.marketplace.paymentgateway.domain.Order;
+import com.learning.marketplace.paymentgateway.model.NewOrderRequest;
+import com.learning.marketplace.paymentgateway.model.OrderResponse;
+import com.learning.marketplace.paymentgateway.services.OrderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.learning.marketplace.error;
+package com.learning.marketplace.paymentgateway.error;
 
 public class OrderNotFoundException extends RuntimeException {
     public OrderNotFoundException(String id) {

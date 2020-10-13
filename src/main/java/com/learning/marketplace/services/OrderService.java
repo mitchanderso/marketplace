@@ -1,12 +1,14 @@
 package com.learning.marketplace.services;
 
 import com.learning.marketplace.domain.Order;
+import com.learning.marketplace.error.OrderNotFoundException;
 import com.learning.marketplace.model.BankOrderResponse;
 import com.learning.marketplace.model.NewOrderRequest;
 import com.learning.marketplace.model.OrderResponse;
 import com.learning.marketplace.repository.OrderRepository;
 import com.learning.marketplace.utils.OrderUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class OrderService {
@@ -19,6 +21,7 @@ public class OrderService {
         dummyBank = new DummyBank();
     }
 
+    @Transactional
     public Order save(NewOrderRequest newOrderRequest) {
         BankOrderResponse bankOrderResponse = dummyBank.processOrderSuccessfully(newOrderRequest);
 
@@ -32,7 +35,7 @@ public class OrderService {
     }
 
     public OrderResponse getOrderById(String id){
-        Order order = orderRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+        Order order = orderRepository.findById(id).orElseThrow(() -> new OrderNotFoundException(id));
         OrderResponse orderResponse = new OrderResponse(OrderUtils.obfuscateCardNumber(order.getCardNumber()), order.getOrderStatus(), order.getExpiryDate());
         return orderResponse;
     }
